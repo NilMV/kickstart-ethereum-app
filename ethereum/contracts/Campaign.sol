@@ -48,7 +48,7 @@ contract Campaign {
     }
     
     
-    function createRequest(string description, uint value, address recipient) public restricted 
+    function createRequest(string description, uint value, address recipient) public payable restricted 
     {
         require(approvers[msg.sender]);
         Request memory newRequest = Request({
